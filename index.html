@@ -1,52 +1,27 @@
 ---
-
-title: Landing Page
-layout: landing
+title: Blog
+layout: main
 ---
- 
+
 <!-- Main -->
 	<div id="main" class="wrapper style1">
-		<section class="container">
-			<header class="major">
-				<h2>Nulla luctus eleifend</h2>
-				<span class="byline">Mauris vulputate dolor sit amet nibh</span>
-			</header>
-			<div class="row">
-
-				<!-- Content -->
-					<div class="6u">
-						<section>
-							<ul class="style">
-								<li>
-									<span class="fa fa-wrench"></span>
-									<h3>Integer ultrices</h3>
-									<span>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim.</span>
-								</li>
-								<li>
-									<span class="fa fa-cloud"></span>
-									<h3>Aliquam luctus</h3>
-									<span>Pellentesque viverra vulputate enim. Aliquam erat volutpat. Maecenas condimentum enim tincidunt risus accumsan.</span>
-								</li>
-							</ul>
-						</section>
-					</div>
-					<div class="6u">
-						<section>
-							<ul class="style">
-								<li>
-									<span class="fa fa-cogs"></span>
-									<h3>Integer ultrices</h3>
-									<span>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim.</span>
-								</li>
-								<li>
-									<span class="fa fa-leaf"></span>
-									<h3>Aliquam luctus</h3>
-									<span>Pellentesque viverra vulputate enim. Aliquam erat volutpat. Maecenas condimentum enim tincidunt risus accumsan.</span>
-								</li>
-							</ul>
-						</section>
-					</div>
-
-			</div>
-		</section>
+		<div class="container">
+			<section>
+				<div class="10u -1u">
+					<header class="major">
+						<h2>Blog</h2>
+						<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+					</header>
+					<ul class="style">
+						{% for post in site.posts offset: 0 limit: 4 %}
+						<li>
+							<a href="{{ site.baseurl }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
+							<img src="{{ site.baseurl }}/assets/{{ post.featured }}" alt="">
+							{{ post.excerpt }}
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</section>
+		</div>
 	</div>
