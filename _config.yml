@@ -1,3 +1,4 @@
-theme: jekyll-theme-minimal
-title: zjc's homepage
-description: 成为天下第一的大侠！
+name: Horizons
+description: Horizons template for Jekyll
+paginate: 10
+baseurl: '/Horizons-Jekyll-Theme'
